@@ -1,0 +1,15 @@
+{
+  "name": "hangeoreum-ai-tutor-free",
+  "private": true,
+  "version": "2.0.0",
+  "description": "GitHub + Cloudflare Workers AI 무료 할당량을 이용하는 1:1 과외 웹앱",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "check": "node --check src/worker.js && node --check public/app.js && node --check public/questions.js"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}

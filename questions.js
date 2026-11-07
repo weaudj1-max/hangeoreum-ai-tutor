@@ -1,0 +1,41 @@
+// 학생이 API 키 없이도 연습할 수 있는 검토된 예제 문항. AI 생성 문항이 아닙니다.
+window.TUTOR_SUBJECTS = [
+  {id:'수학', icon:'∑', color:'#e7e9ff', caption:'함수 · 미적분 · 수능'},
+  {id:'영어', icon:'Aa', color:'#e5f4ea', caption:'독해 · 문법 · 어휘'},
+  {id:'국어', icon:'가', color:'#fff0db', caption:'독서 · 문학 · 논리'},
+  {id:'지구과학Ⅰ', icon:'◉', color:'#e4f1fa', caption:'지질 · 기상 · 천문'},
+  {id:'C언어', icon:'</>', color:'#f0e8fa', caption:'코드 · 포인터 · 배열'},
+  {id:'통합과학', icon:'⚗', color:'#ffe9ec', caption:'물리 · 생명 · 화학'}
+];
+window.TUTOR_BANK = [
+  {id:'m01',subject:'수학',level:'기초',topic:'일차방정식',question:'방정식 x + 5 = 12를 만족하는 x의 값은?',options:['5','7','12','17'],answer:1,explanation:'양변에서 5를 빼면 x = 12 - 5 = 7입니다. 등식의 양변에 같은 수를 더하거나 빼도 등식이 유지됩니다.'},
+  {id:'m02',subject:'수학',level:'기초',topic:'지수',question:'2^x = 16일 때 x의 값은?',options:['2','3','4','8'],answer:2,explanation:'16 = 2^4 이므로 밑이 2로 같고 지수가 x = 4입니다.'},
+  {id:'m03',subject:'수학',level:'보통',topic:'미분',question:'함수 f(x) = x² - 3x에서 f′(2)의 값은?',options:['1','-1','4','0'],answer:0,explanation:'f′(x) = 2x - 3이므로 f′(2) = 4 - 3 = 1입니다. 미분한 뒤 x = 2를 대입해야 합니다.'},
+  {id:'m04',subject:'수학',level:'보통',topic:'수열',question:'수열의 일반항이 aₙ = 3n + 1일 때 a₅의 값은?',options:['12','13','15','16'],answer:3,explanation:'n = 5를 대입하면 a₅ = 3×5 + 1 = 16입니다.'},
+  {id:'m05',subject:'수학',level:'심화',topic:'로그',question:'log₂8 + log₃9의 값은?',options:['4','5','6','7'],answer:1,explanation:'2³ = 8이므로 log₂8 = 3, 3² = 9이므로 log₃9 = 2입니다. 따라서 합은 5입니다.'},
+  {id:'e01',subject:'영어',level:'기초',topic:'현재 시제',question:'빈칸에 알맞은 말은? I ___ to school every day.',options:['goes','go','going','gone'],answer:1,explanation:'주어 I와 반복되는 습관을 나타내는 every day 때문에 현재형 go를 씁니다.'},
+  {id:'e02',subject:'영어',level:'보통',topic:'현재완료',question:'She has lived in Seoul ___ 2020. 빈칸에 들어갈 말은?',options:['since','for','during','until'],answer:0,explanation:'since는 시작 시점(2020)을, for는 지속 기간(three years)을 나타냅니다.'},
+  {id:'e03',subject:'영어',level:'보통',topic:'접속사',question:'“Although it was raining, they went outside.”의 의미로 맞는 것은?',options:['비가 와서 그들은 외출하지 않았다.','비가 그친 뒤에 그들은 외출했다.','비가 오고 있었지만 그들은 밖에 나갔다.','그들이 밖에 나가자 비가 내렸다.'],answer:2,explanation:'Although는 ‘비록 ~이지만’이라는 양보 접속사입니다. 예상과 다른 결과를 연결합니다.'},
+  {id:'e04',subject:'영어',level:'심화',topic:'관계대명사',question:'The report, ___ was published yesterday, changed the policy. 빈칸에 알맞은 말은?',options:['who','where','what','which'],answer:3,explanation:'선행사가 사물(report)이고 콤마 뒤 계속적 용법이므로 관계대명사 which가 적합합니다. that은 계속적 용법에 쓰지 않습니다.'},
+  {id:'e05',subject:'영어',level:'심화',topic:'가정법 과거완료',question:'If I had known, I ___ you. 빈칸에 알맞은 말은?',options:['call','will call','would have called','have called'],answer:2,explanation:'과거 사실과 반대인 가정법 과거완료는 If + had p.p., 주절 would have p.p. 형태입니다.'},
+  {id:'k01',subject:'국어',level:'기초',topic:'논리',question:'“비가 오면 땅이 젖는다.”가 참일 때, “땅이 젖지 않았다.”에서 반드시 추론되는 것은?',options:['비가 왔다.','바람이 불었다.','비가 오지 않았다.','땅이 마르지 않았다.'],answer:2,explanation:'P → Q가 참이면 ¬Q → ¬P도 참입니다(대우). 땅이 젖지 않았다면 비가 오지 않았습니다.'},
+  {id:'k02',subject:'국어',level:'기초',topic:'접속 표현',question:'두 문장을 대조하거나 앞 내용을 뒤집을 때 주로 사용하는 접속 표현은?',options:['그러므로','그러나','따라서','게다가'],answer:1,explanation:'‘그러나’는 역접 관계를 나타냅니다. ‘그러므로·따라서’는 인과, ‘게다가’는 첨가입니다.'},
+  {id:'k03',subject:'국어',level:'보통',topic:'추론',question:'“모든 A는 B이다. 어떤 B는 C이다.”에서 반드시 참이라고 할 수 있는 것은?',options:['A와 C의 공통 원소가 반드시 존재한다고 할 수 없다.','모든 A는 C이다.','모든 C는 A이다.','어떤 A는 반드시 C이다.'],answer:0,explanation:'B 안에 A와 C가 각각 존재하더라도 둘이 겹친다는 조건이 없습니다. 일부 B가 C라는 사실만으로 A∩C의 존재를 보장할 수 없습니다.'},
+  {id:'k04',subject:'국어',level:'보통',topic:'시적 태도',question:'“돌아오지 않는 계절을 기다리며 나는 빈 의자를 바라보았다.”에 가장 잘 드러나는 정서는?',options:['대상에 대한 분노','미래에 대한 환희','회복 불가능한 대상에 대한 그리움','타인에 대한 경멸'],answer:2,explanation:'‘돌아오지 않는’은 상실을, ‘기다리며’와 ‘빈 의자’는 부재한 대상을 향한 그리움을 드러냅니다.'},
+  {id:'k05',subject:'국어',level:'심화',topic:'논증',question:'“표본 10명 모두가 찬성했으므로 국민 전체가 찬성한다.”에서 가장 핵심적인 논리적 문제는?',options:['인과관계의 역전','동어반복','순환논증','대표성이 검증되지 않은 표본의 성급한 일반화'],answer:3,explanation:'표본의 크기와 추출 방식이 모집단을 대표하는지 검증하지 않은 채 전체의 의견으로 일반화했습니다.'},
+  {id:'g01',subject:'지구과학Ⅰ',level:'기초',topic:'판 구조론',question:'일반적으로 해양판과 대륙판이 수렴하면 어느 판이 상대적으로 쉽게 섭입하는가?',options:['대륙판','해양판','둘 다 섭입하지 않는다','밀도가 낮은 판'],answer:1,explanation:'일반적으로 해양 지각은 대륙 지각보다 밀도가 크므로 해양판이 대륙판 아래로 섭입하기 쉽습니다.'},
+  {id:'g02',subject:'지구과학Ⅰ',level:'보통',topic:'우주 팽창',question:'먼 은하의 스펙트럼에서 적색편이가 관측될 때, 일반적으로 의미하는 것은?',options:['은하가 정지해 있다.','은하가 가까워지고 있다.','은하의 온도가 반드시 감소했다.','은하가 우리로부터 멀어지고 있다.'],answer:3,explanation:'관측 파장이 긴 쪽으로 이동한 적색편이는 우주론적으로 일반적으로 멀어짐(우주 팽창)을 나타냅니다.'},
+  {id:'g03',subject:'지구과학Ⅰ',level:'보통',topic:'전향력',question:'북반구에서 움직이는 공기 덩어리는 전향력 때문에 진행 방향 기준 어느 쪽으로 편향되는가?',options:['오른쪽','왼쪽','항상 북쪽','항상 남쪽'],answer:0,explanation:'북반구에서는 전향력이 운동 방향의 오른쪽으로 작용합니다. 남반구에서는 왼쪽입니다.'},
+  {id:'g04',subject:'지구과학Ⅰ',level:'심화',topic:'별의 연주시차',question:'연주시차가 0.5초각인 별과 0.1초각인 별이 있을 때, 더 가까운 별은?',options:['0.1초각인 별','0.5초각인 별','두 별의 거리가 같다.','시차만으로는 비교 불가능하다.'],answer:1,explanation:'거리(pc) = 1 / 연주시차(초각)입니다. 0.5초각은 2pc, 0.1초각은 10pc이므로 0.5초각인 별이 더 가깝습니다.'},
+  {id:'g05',subject:'지구과학Ⅰ',level:'심화',topic:'기압과 바람',question:'등압선 간격이 같은 지도에서 일반적으로 기압 경도력이 더 큰 곳은?',options:['기압 차가 더 작은 곳','지표 기온이 높은 곳','같은 거리에서 기압 차가 더 큰 곳','풍향이 남풍인 곳'],answer:2,explanation:'기압 경도력의 크기는 단위 거리당 기압 변화에 관련됩니다. 같은 거리에서 기압 차가 클수록 큽니다.'},
+  {id:'c01',subject:'C언어',level:'기초',topic:'연산자 우선순위',question:'C언어에서 printf("%d", 2 + 3 * 4);의 출력은?',options:['20','14','24','9'],answer:1,explanation:'곱셈이 덧셈보다 우선합니다. 3*4=12, 2+12=14를 출력합니다.'},
+  {id:'c02',subject:'C언어',level:'기초',topic:'반복문',question:'int s=0; for(int i=0;i<4;i++) s+=i; 실행 후 s는?',options:['3','4','6','10'],answer:2,explanation:'i가 0,1,2,3일 때 더하므로 s=0+1+2+3=6입니다. i<4 조건에서 4는 포함되지 않습니다.'},
+  {id:'c03',subject:'C언어',level:'보통',topic:'포인터',question:'int x=7; int *p=&x; printf("%d", *p);의 출력은?',options:['7','메모리 주소','0','컴파일 오류'],answer:0,explanation:'p는 x의 주소를 저장하고 *p는 해당 주소의 값(7)을 읽습니다.'},
+  {id:'c04',subject:'C언어',level:'보통',topic:'배열',question:'int a[4]={10,20,30,40}; 에서 a[2]의 값은?',options:['10','20','40','30'],answer:3,explanation:'C 배열의 인덱스는 0부터 시작하므로 a[0]=10, a[1]=20, a[2]=30입니다.'},
+  {id:'c05',subject:'C언어',level:'심화',topic:'증가 연산자',question:'int a=5; int b=a++; 실행 직후 a와 b의 값은?',options:['a=5, b=6','a=6, b=6','a=6, b=5','a=5, b=5'],answer:2,explanation:'후위 증가 연산자 a++는 현재 값 5를 먼저 b에 할당한 뒤 a를 6으로 증가시킵니다.'},
+  {id:'s01',subject:'통합과학',level:'기초',topic:'옴의 법칙',question:'저항이 5Ω인 도선에 2A의 전류가 흐를 때 전압은?',options:['2.5V','7V','10V','25V'],answer:2,explanation:'옴의 법칙 V = I R에 따라 V = 2A × 5Ω = 10V입니다.'},
+  {id:'s02',subject:'통합과학',level:'기초',topic:'세포',question:'세포 호흡을 통해 ATP를 주로 생성하는 진핵세포의 소기관은?',options:['미토콘드리아','리보솜','골지체','핵'],answer:0,explanation:'미토콘드리아는 세포 호흡에 관여해 많은 ATP를 생산합니다. 리보솜은 단백질 합성을 담당합니다.'},
+  {id:'s03',subject:'통합과학',level:'보통',topic:'호흡계',question:'사람의 폐에서 산소와 이산화 탄소가 혈액과 교환되는 주된 장소는?',options:['기관','폐포','후두','횡격막'],answer:1,explanation:'얇은 폐포 벽과 모세혈관을 사이에 두고 기체가 분압 차에 따라 확산됩니다.'},
+  {id:'s04',subject:'통합과학',level:'보통',topic:'운동 법칙',question:'질량 3kg인 물체에 알짜힘 6N이 작용할 때 가속도의 크기는?',options:['2m/s²','3m/s²','9m/s²','18m/s²'],answer:0,explanation:'뉴턴 제2법칙 F=ma에서 a=F/m=6/3=2m/s²입니다.'},
+  {id:'s05',subject:'통합과학',level:'심화',topic:'천문',question:'다른 조건이 같다면 연주시차가 더 큰 별의 특징으로 옳은 것은?',options:['거리가 더 멀다.','반드시 더 뜨겁다.','반드시 더 밝다.','지구에서 더 가깝다.'],answer:3,explanation:'연주시차는 거리와 반비례합니다. 연주시차가 클수록 거리가 더 가깝습니다.'}
+];
